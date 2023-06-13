@@ -1,11 +1,11 @@
-package com.dupenghao.conmmon;
+package com.dupenghao.conmmon.entity;
 
 /**
  * Created by 杜鹏豪 on 2023/6/13.
  */
 public class Result {
 
-    private int code;   // 状态码
+    private int code;   // 状态码 200 500
     private String msg; // 状态信息
     private Object data;    // 数据
 
