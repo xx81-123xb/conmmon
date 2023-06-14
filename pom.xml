@@ -2,10 +2,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.dupenghao</groupId>
+  <groupId>com.dupenghao.dph</groupId>
   <artifactId>conmmon</artifactId>
   <version>1.0</version>
-  <packaging>jar</packaging>
 
   <name>conmmon</name>
   <url>http://maven.apache.org</url>
@@ -86,14 +85,14 @@
           <!--本地jar地址, 对应上面的altDeploymentRepository-->
           <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
           <!--分支-->
-          <branch>refs/heads/master</branch>
+          <branch>refs/heads/main</branch>
           <merge>true</merge>
 
           <includes>
             <include>**/*</include>
           </includes>
           <!--对应github上创建的仓库名称 name-->
-          <repositoryName>mvn-repo</repositoryName>
+          <repositoryName>mvnn-repo</repositoryName>
           <!--github登录账号 对应的密码存在maven的setting.xml文件中-->
           <!--由github组织拥有，则该值将是组织名称，如果由用户拥有，则该值将是用户名-->
           <repositoryOwner>xx81-123xb</repositoryOwner>
