@@ -53,6 +53,7 @@
         </configuration>
       </plugin>
 
+      <!--添加源文件插件-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
