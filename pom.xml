@@ -16,6 +16,30 @@
         <personalRepoPath>D:/mvn-repo/conmmon</personalRepoPath>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>gitee</id>
+            <!--<url>https://gitee.com/用户名/git仓库名/raw/对应分支名</url>-->
+            <url>https://gitee.com/du-penghao/mvn-repo/raw/dependency</url>
+            <releases>
+                <updatePolicy>always</updatePolicy>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+                <enabled>true</enabled>
+                <checksumPolicy>fail</checksumPolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>gitee</id>
+            <url>https://gitee.com/du-penghao/mvn-repo/raw/dependency</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <distributionManagement>
         <repository>
             <id>gitee</id>
