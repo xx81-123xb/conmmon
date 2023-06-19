@@ -13,13 +13,13 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <github.global.server>github</github.global.server>
-        <personalRepoPath>D:/mvn-repo</personalRepoPath>
+        <personalRepoPath>D:/mvn-repo/conmmon</personalRepoPath>
     </properties>
 
     <distributionManagement>
         <repository>
             <id>gitee</id>
-            <url>file:${personalRepoPath}/conmmon</url>
+            <url>file:${personalRepoPath}</url>
         </repository>
     </distributionManagement>
 
@@ -70,6 +70,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -79,6 +80,27 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>com.dupenghao.dph</groupId>
+                <artifactId>gitee-autodeploy</artifactId>
+                <version>1.0</version>
+                <configuration>
+                    <version>${project.version}</version>
+                    <projectName>${project.artifactId}</projectName>
+                    <repoPath>${personalRepoPath}</repoPath>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>gitee-autodeploy</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>autodeploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
             <!--      &lt;!&ndash;本地部署配置&ndash;&gt;-->
             <!--      <plugin>-->
             <!--        <artifactId>maven-deploy-plugin</artifactId>-->
